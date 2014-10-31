@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "Sticky Github Headers",
+  "short_name": "Github Headers",
+  "description": "Make useful information sticky when viewing pull requests.",
+  "version": "1.1",
+
+  "icons": { "128": "sticky-github-128.png" },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*/*/pull/*/files"],
+      "js": ["jquery-2.1.1.min.js", "jquery.sticky.js", "make-sticky.js"]
+    }
+  ],
+
+  "permissions": [
+    "https://github.com/"
+  ]
+}
